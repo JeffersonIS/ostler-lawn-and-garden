@@ -15,7 +15,7 @@ function Home() {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState('pending');
 
   // Default placeholders
   const defaultPlaceholders = {
@@ -70,8 +70,6 @@ function Home() {
     setErrors({});
 
     if (validateForm()) {
-      console.log('Form submitted:', formData);
-      alert('Thank you! We will contact you within 12 hours.');
       try {
         const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
           method: 'POST',
@@ -80,11 +78,13 @@ function Home() {
           },
           body: JSON.stringify(formData)
         });
-
         if (response.ok) {
-          setIsSubmitted(true);
+          setIsSubmitted('success');
         } else {
-          throw new Error('Submission failed');
+          setErrors({
+            submit: "Could not submit the form. Please reach out to us at (509) 554-8753 to schedule"
+          });
+          setIsSubmitted('failed');
         }
       } catch (error) {
         setErrors({
@@ -128,11 +128,16 @@ function Home() {
           <h2 className="form-title">Get Your Free Estimate</h2>
           <p className="form-note">We will respond within 12 Hours</p>
           
-          {isSubmitted ? (
+          {isSubmitted === 'success' ? (
             <div className="success-message">
               <h3>Thank you!</h3>
               <p>We will contact you within 12 hours.</p>
               <p>We're stoked to mow your lawn! 🌿</p>
+            </div>
+          ) : isSubmitted === 'failed' ? (
+            <div className="failure-message">
+              <h3>Oops!</h3>
+              <p>We couldn't submit your form. Please call/text us at (509) 554-8753!</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
