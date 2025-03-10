@@ -238,6 +238,7 @@ function Home() {
       <br></br>
       <p className="home-description">
         Fill out the form above or call/text us at 509-554-8753.
+        <br></br>Locally owned and operated in Richland, WA.
       </p>
       <About />
     </div>
