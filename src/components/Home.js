@@ -114,7 +114,7 @@ function Home() {
     <div className="landing-page">
       <div className="hero-section">
         <h1>
-          No time to mow? <span className="highlight">We got you!</span>
+          No time to mow? <div className="highlight">We got you!</div>
         </h1>
         <p className="subtitle">Own the best lawn on the block...without lifting a finger.</p>
       </div>
@@ -141,42 +141,57 @@ function Home() {
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
-              <input 
-                type="text"
-                name="fullName"
-                value={formData.fullName}
-                onChange={handleChange}
-                placeholder={errors.fullName || defaultPlaceholders.fullName}
-                className={`form-input ${errors.fullName ? 'error' : ''}`}
-                disabled={isSubmitting}
-              />
-              <input 
-                type="text"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                placeholder={errors.address || defaultPlaceholders.address}
-                className={`form-input ${errors.address ? 'error' : ''}`}
-                disabled={isSubmitting}
-              />
-              <input 
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder={errors.email || defaultPlaceholders.email}
-                className={`form-input ${errors.email ? 'error' : ''}`}
-                disabled={isSubmitting}
-              />
-              <input 
-                type="tel"
-                name="phone"
-                value={errors.phone || formData.phone}
-                onChange={handleChange}
-                placeholder={errors.phone || defaultPlaceholders.phone}
-                className={`form-input ${errors.phone ? 'error' : ''}`}
-                disabled={isSubmitting}
-              />
+              <div className="input-group">
+              {errors.fullName && <label className="error-label">{errors.fullName}</label>}
+                <input 
+                  type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  placeholder={defaultPlaceholders.fullName}
+                  className={`form-input ${errors.fullName ? 'error' : ''}`}
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <div className="input-group">
+              {errors.address && <label className="error-label">{errors.address}</label>}
+                <input 
+                  type="text"
+                  name="address"
+                  value={formData.address}
+                  onChange={handleChange}
+                  placeholder={defaultPlaceholders.address}
+                  className={`form-input ${errors.address ? 'error' : ''}`}
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <div className="input-group">
+              {errors.email && <label className="error-label">{errors.email}</label>}
+                <input 
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder={defaultPlaceholders.email}
+                  className={`form-input ${errors.email ? 'error' : ''}`}
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <div className="input-group">
+              {errors.phone && <label className="error-label">{errors.phone}</label>}
+                <input 
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder={defaultPlaceholders.phone}
+                  className={`form-input ${errors.phone ? 'error' : ''}`}
+                  disabled={isSubmitting}
+                />
+              </div>
 
               <div className="quote-option">
                 <label className="quote-checkbox">
@@ -192,15 +207,18 @@ function Home() {
               </div>
 
               {formData.hasQuote && (
-                <input
-                  type="text"
-                  name="quoteReference"
-                  value={formData.quoteReference}
-                  onChange={handleChange}
-                  placeholder={errors.quoteReference || "Enter your quote amount"}
-                  className={`form-input quote-reference ${errors.quoteReference ? 'error' : ''}`}
-                  disabled={isSubmitting}
-                />
+                <div className="input-group">
+                  {errors.quoteReference && <label className="error-label">{errors.quoteReference}</label>}
+                  <input
+                    type="text"
+                    name="quoteReference"
+                    value={formData.quoteReference}
+                    onChange={handleChange}
+                    placeholder="Enter your quote amount"
+                    className={`form-input quote-reference ${errors.quoteReference ? 'error' : ''}`}
+                    disabled={isSubmitting}
+                  />
+                </div>
               )}
 
               <div className="button-container">
