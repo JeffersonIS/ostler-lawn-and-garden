@@ -57,7 +57,7 @@
   box-sizing: border-box;
   padding: 15px 30px;
   margin: 0;
-  background-color: #ffb700;
+  background-color: #00b140;
   color: white;
   border: none;
   border-radius: 8px;
@@ -69,7 +69,7 @@
 }
 
 .cta-button:hover {
-  background-color: #ffb700d3;
+  background-color: #00b140;
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0, 177, 64, 0.3);
 }
@@ -172,14 +172,13 @@
 }
 
 .signup-form {
-  width: 100%;
-  max-width: 650px;
+  width: 450px;
   padding: 10px;
   padding-top: 0px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  justify-self: start; /* Aligns form to start of grid cell */
+  margin: 0 auto; /* Center the form */
 }
 
 
@@ -354,6 +353,10 @@
 }
 
 @media (max-width: 767px) {
+  .hero-section {
+    margin-top: 60px;
+  }
+
   .hero-section h1 {
     font-size: 2rem;
   }
@@ -364,7 +367,7 @@
   
   .opt-in-section {
     grid-template-columns: 1fr; /* Stack columns on mobile */
-    gap: 20px; /* Reduce gap on mobile */
+    gap: 80px; /* Reduce gap on mobile */
   }
   .opt-in-section > *:first-child {
     order: 2; /* Move first column to bottom */
@@ -374,6 +377,7 @@
   }
 
   .preview-images {
+    margin-top: 20px;
     max-width: 100%; /* Full width on mobile */
     margin-bottom: 20px;
   }
@@ -385,11 +389,21 @@
   }
   
   .signup-form {
-    max-width: 100%;
+    width: 270px;
     padding: 20px;
+    margin: 0 auto; /* Center the form on mobile */
   }
 
   .google-form-container {
     padding-top: 150%;
   }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .form-note {
+    font-size: 1rem;
+  } 
+
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import logoImg from '../images/logoblack.png';
 
 function Header() {
   return (
@@ -7,7 +8,7 @@ function Header() {
       <div className="header-content">
         <div className="logo-container">
           <img 
-            src="/images/logo.png" 
+            src={logoImg} 
             alt="Jefferson's Lawn Care Logo" 
             className="logo"
           />

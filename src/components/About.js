@@ -1,5 +1,7 @@
 import React from 'react';
 import './About.css';
+import mowing1Img from '../images/mowing1.png';
+import brosmowingImg from '../images/brosmowing.JPG';
 
 function About() {
   return (
@@ -16,7 +18,7 @@ function About() {
 
         <div className="about-image">
           <img
-            src="/images/mowing1.png"
+            src={mowing1Img}
             alt="Professional lawn care service"
             className="about-photo services-description-img"
           />
@@ -42,7 +44,7 @@ function About() {
         </div>
         <div className="about-image">
           <img
-            src="/images/brosmowing.jpg"
+            src={brosmowingImg}
             alt="Professional lawn care service"
             className="about-photo services-description-img"
           />

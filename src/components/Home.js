@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faScissors,
-  faLeaf,
-  faBroom
-} from '@fortawesome/free-solid-svg-icons';
+import servicesDescriptionImg from '../images/services-description.png';
 import About from './About';
 import './Home.css';
 
@@ -126,17 +121,17 @@ function Home() {
 
       <div className="opt-in-section">
         <div className="preview-images">
-          <img src="/images/services-description.png" alt="Beautiful Lawn Results" />
+          <img src={servicesDescriptionImg} alt="Offered Services Img" />
         </div>
         
         <div className="signup-form">
           <h2 className="form-title">Get Your Free Estimate</h2>
-          <p className="form-note">Jefferson will respond within 12 Hours</p>
+          <p className="form-note">We will respond within 12 Hours</p>
           
           {isSubmitted ? (
             <div className="success-message">
               <h3>Thank you!</h3>
-              <p>Jefferson will contact you within 12 hours.</p>
+              <p>We will contact you within 12 hours.</p>
               <p>We're stoked to mow your lawn! 🌿</p>
             </div>
           ) : (
