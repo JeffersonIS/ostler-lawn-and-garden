@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/ostler-lawn-and-garden/static/css/main.ed35d26d.css",
-    "main.js": "/ostler-lawn-and-garden/static/js/main.36a8db35.js",
+    "main.css": "/ostler-lawn-and-garden/static/css/main.b1a864f5.css",
+    "main.js": "/ostler-lawn-and-garden/static/js/main.d687895b.js",
     "static/js/453.6eac6aad.chunk.js": "/ostler-lawn-and-garden/static/js/453.6eac6aad.chunk.js",
+    "static/media/brosmowing.JPG": "/ostler-lawn-and-garden/static/media/brosmowing.f2f51cbaf99bff804dce.JPG",
+    "static/media/mowing1.png": "/ostler-lawn-and-garden/static/media/mowing1.55b095c13d69048d4d67.png",
+    "static/media/services-description.png": "/ostler-lawn-and-garden/static/media/services-description.f6df2c67a47386eb38dc.png",
+    "static/media/logoblack.png": "/ostler-lawn-and-garden/static/media/logoblack.adc149b9a731be38030e.png",
     "static/media/logo.svg": "/ostler-lawn-and-garden/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/ostler-lawn-and-garden/index.html",
-    "main.ed35d26d.css.map": "/ostler-lawn-and-garden/static/css/main.ed35d26d.css.map",
-    "main.36a8db35.js.map": "/ostler-lawn-and-garden/static/js/main.36a8db35.js.map",
+    "main.b1a864f5.css.map": "/ostler-lawn-and-garden/static/css/main.b1a864f5.css.map",
+    "main.d687895b.js.map": "/ostler-lawn-and-garden/static/js/main.d687895b.js.map",
     "453.6eac6aad.chunk.js.map": "/ostler-lawn-and-garden/static/js/453.6eac6aad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed35d26d.css",
-    "static/js/main.36a8db35.js"
+    "static/css/main.b1a864f5.css",
+    "static/js/main.d687895b.js"
   ]
 }
